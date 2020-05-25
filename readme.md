@@ -69,5 +69,15 @@ git tag -d myTag
 # eliminar un tag remoto
 git push origin :refs/tags/12345
 
-# stash
+# stash, pausar el trabajo y mover al "stack stash"
+git stash 
+
+# reaplicar cambios stasheados (stash mas reciente)
+git stash pop
+
+# ver pila del stash
+git stash list
+
+# reaplicar un stash espcifico
+git stash apply stash@{1}
 
