@@ -2,3 +2,4 @@ flash
 batman
 green lantern
 superman
+black canary
