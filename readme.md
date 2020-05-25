@@ -67,5 +67,7 @@ git push --tags
 git tag -d myTag
 
 # eliminar un tag remoto
+git push origin :refs/tags/12345
 
+# stash
 
