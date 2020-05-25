@@ -22,3 +22,5 @@ Nota: -1 indica que se borra 1, 2 o mas commits
 
 # Borrar cambio del versionado, baja al working area
 git reset HEAD-1
+
+esta linea camio
