@@ -38,3 +38,6 @@ git checkout branchName
 
 # crear nueva rama y cambiarse a ella
 git checkout -B branchName
+
+# realizar merge
+git merge branchNameOrigin
