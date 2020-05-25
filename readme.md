@@ -41,3 +41,11 @@ git checkout -B branchName
 
 # realizar merge
 git merge branchNameOrigin
+
+# agregar un repositorio remoto
+git remote add origin myUrl
+
+# subir todas las ramas desde el local al remoto
+git push --all origin
+
+
