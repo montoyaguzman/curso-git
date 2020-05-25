@@ -51,4 +51,18 @@ git push --all origin
 # clonar un repo
 git clone mySshUrl | myHttpsUrl
 
+# crear un tag en el commit actual
+git tag 0.0.1
+
+# crear un tag de un commit especifico
+git tag -a 0.0.0 myHash -m "tag 0"
+
+# ver mis tags
+git tag --list
+
+# subir tags 
+git push --tags
+
+# eliminar un tag
+git tag -d myTag
 
