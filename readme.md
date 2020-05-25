@@ -63,6 +63,9 @@ git tag --list
 # subir tags 
 git push --tags
 
-# eliminar un tag
+# eliminar un tag local
 git tag -d myTag
+
+# eliminar un tag remoto
+
 
