@@ -1,2 +1,4 @@
 flash
 batman
+green lantern
+superman
