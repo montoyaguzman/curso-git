@@ -3,3 +3,4 @@ batman
 green lantern
 superman
 wonder woman
+black canary
