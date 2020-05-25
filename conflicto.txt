@@ -1,0 +1,28 @@
+Pasos para replicar un conflicto
+
+1. Desde la rama develop, modificar una linea de texto en un archivo.
+2. Realizar un add y su respectivo commit.
+git add .
+git commit -m "mi commit en develop"
+
+3. Regresar un commit antes del mas reciente
+git checkout hashAnterior
+
+4. A partir de dicho commit, crear una rama distinta.
+git checkout -B feature/prueba
+
+5. En esa nueva rama modificar la misma linea con texto distinto, 
+hacer el add y commit.
+git add .
+git commit -m "mi commit en feature"
+
+6. Regresar a la rama develop y hacer el merge desde feature.
+git checkout develop
+git merge feaure/prueba2
+
+7. Daria un conflicto, lo editan como prefieran y realizan un nuevo commit.
+git add .
+git commit -m "commit que arregla conflictos"
+
+8. Ejecutar el comando git log --oneline --graph para ver como se unio el 
+commit de forma grafica
