@@ -48,4 +48,7 @@ git remote add origin myUrl
 # subir todas las ramas desde el local al remoto
 git push --all origin
 
+# clonar un repo
+git clone mySshUrl | myHttpsUrl
+
 
