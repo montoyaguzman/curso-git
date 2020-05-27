@@ -17,24 +17,28 @@ git commit -am "un add y un commit al mismo tiempo"
 git checkout hash
 
 # Regresar al commit mas actual
-git checkout branchName | .
+git checkout branchName
 
 # Borrar último commit del versionado, baja los cambios al working area
-git reset HEAD-1
+git reset HEAD~1
 
-# Borrar último commit definitivamente
+# Borrar último commit definitivamente (es irrecuperable)
 git reset --hard HEAD~1
-Nota: ~1 indica que se borra 1, 2 o mas commits
+
 
 # revert, actualiza el head con un commit anterior, 
 # lo coloca como mas rciente, mantiene pero mantiene el historial
 git revert HEAD
+Nota: ~1 indica que se borra 1, 2 o mas commits
 
 # crear rama
 git branch branchName
 
 # listar ramas
 git branch
+
+# crea una nueva rama
+git branch newBranchName
 
 # cambiar de rama
 git checkout branchName
@@ -43,23 +47,24 @@ git checkout branchName
 git checkout -B branchName
 
 # realizar merge
-git checkout currentBranch
-git merge branchNameOrigin
+git checkout destinationBranch
+git merge sourceBranch
 
 # agregar un repositorio remoto
-git remote add origin myUrl
+git remote add aliasName myUrl
+Nota: aliasName casi siempre es 'origin' por convención
 
 # cambiar repositorio remoto
-git remote set-url origin myNewUrl
+git remote set-url aliasName myNewUrl
 
 # subir una rama
-git push remoteAliasName remoteBranchName
-
-# subir todas las ramas desde el local al remoto
-git push --all origin
+git push remoteAliasName branchName
 
 # subir cambios a una rama
 git push origin branchName
+
+# subir todas las ramas desde el local al remoto
+git push --all origin
 
 # clonar un repo
 git clone mySshUrl | myHttpsUrl
@@ -94,3 +99,6 @@ git stash list
 # reaplicar un stash espcifico
 git stash apply stash@{1}
 
+# rebase (fusión de ramas)
+git checkout destinationBranch
+git rebase sourceBranch
