@@ -10,7 +10,7 @@ git add .
 # Hacer un commit
 git commit -m "agrega un commit"
 
-# Agregar al staging y hace el commit (funciona con archivos ya existentes)
+# Agregar al staging y hacer commit (aplica solo para modificaciones, no nuevos archivos)
 git commit -am "un add y un commit al mismo tiempo"
 
 # Cambiar entre commits
@@ -58,4 +58,39 @@ git push remoteAliasName remoteBranchName
 # subir todas las ramas desde el local al remoto
 git push --all origin
 
+# subir cambios a una rama
+git push origin branchName
+
+# clonar un repo
+git clone mySshUrl | myHttpsUrl
+
+# crear un tag en el commit actual
+git tag 0.0.1
+
+# crear un tag de un commit especifico
+git tag -a 0.0.0 myHash -m "tag 0"
+
+# ver mis tags
+git tag --list
+
+# subir tags 
+git push --tags
+
+# eliminar un tag local
+git tag -d myTag
+
+# eliminar un tag remoto
+git push origin :refs/tags/12345
+
+# stash, pausar el trabajo y mover al "stack stash"
+git stash 
+
+# reaplicar cambios stasheados (stash mas reciente)
+git stash pop
+
+# ver pila del stash
+git stash list
+
+# reaplicar un stash espcifico
+git stash apply stash@{1}
 
